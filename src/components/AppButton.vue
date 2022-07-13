@@ -2,7 +2,7 @@
 import { Button as KButton } from "@progress/kendo-vue-buttons";
 </script>
 <template>
-  <KButton v-bind="$attrs">
+  <KButton v-bind="$attrs" :icon="'calendar'" :theme-color="'primary'">
     <slot></slot>
   </KButton>
 </template>

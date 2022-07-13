@@ -18,7 +18,7 @@
     "lodash-es": "^4.17.21",
     "unplugin-vue-components": "^0.20.1",
     "uuid": "^8.3.2",
-    "vite-plugin-pages": "^0.24.3",
+    "vite-plugin-pages": "^0.25.0",
     "vue": "^3.2.37",
     "vue-router": "^4.0.16"
   },
