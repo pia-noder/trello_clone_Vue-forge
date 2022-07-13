@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Navbar from "./components/Navbar.vue";
+import Drawer from "./components/Drawer.vue";
+</script>
 
 <template>
-  <RouterView />
+  <Navbar />
+  <Drawer />
 </template>
