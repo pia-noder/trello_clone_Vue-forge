@@ -3,7 +3,7 @@
     <div :class="$style.left">
       <span :class="$style.logo">
         <img
-          :class="$style.logo"
+          width="150"
           src="https://vuejsforge.com/images/logo.svg"
           alt="Vue.js Forge"
       /></span>
@@ -76,10 +76,7 @@ const logout = () => {
 }
 .left {
 }
-.logo {
-  width: 110px;
-  height: 50px;
-}
+
 .buttonTeam {
   color: #ff6358;
 }

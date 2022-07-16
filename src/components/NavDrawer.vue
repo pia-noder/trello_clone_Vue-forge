@@ -23,9 +23,12 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { Drawer, DrawerContent } from "@progress/kendo-vue-layout";
-
+import { useLocalStorage } from "@vueuse/core";
+import router from "@/router";
 const selectedId = ref(0);
-const expanded = ref(false);
+//useLocalStorage("key", "value") update the value inside localStorage everytime it change inside the app
+const expanded = useLocalStorage("app-drawer-expanded", false);
+
 const position = ref("start");
 const mode = ref("push");
 
@@ -39,7 +42,7 @@ const items = computed(() => [
     icon: "k-i-set-column-position",
     selected: true,
     data: {
-      path: "/",
+      path: "/boards",
     },
   },
 
@@ -47,14 +50,14 @@ const items = computed(() => [
     text: "Templates",
     icon: "k-i-border-left",
     data: {
-      path: "/",
+      path: "/templates",
     },
   },
   {
     text: "Settings",
     icon: "k-i-gear",
     data: {
-      path: "/",
+      path: "/settings",
     },
   },
   {
@@ -66,9 +69,11 @@ const items = computed(() => [
   },
 ]);
 
-const onSelect = (event) => {
-  selectedId.value = event.itemIndex;
-  expanded.value = !expanded.value;
+const onSelect = ({ itemIndex }: { itemIndex: number }) => {
+  const item = items.value[itemIndex];
+  selectedId.value = itemIndex;
+  if (item.data.path) router.push(item.data.path);
+  if (typeof item.data.action === "function") item.data.action();
 };
 </script>
 <style module>

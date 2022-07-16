@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Navbar from "./components/Navbar.vue";
-import Drawer from "./components/Drawer.vue";
+import NavBar from "./components/Navbar.vue";
+import NavDrawer from "./components/NavDrawer.vue";
 </script>
 
 <template>
-  <Navbar />
-  <Drawer />
+  <NavBar />
+  <NavDrawer />
 </template>

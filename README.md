@@ -57,3 +57,8 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```sh
 npm run lint
 ```
+
+## What I learned ?
+[-] To use VueUse utilities for really commun functions.
+[-] To use page directory to create the routing system.
+[-] 8Base
