@@ -57,3 +57,6 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```sh
 npm run lint
 ```
+
+### Link to vue-forge-exercice 
+[Notion - Project Exercises](https://vueschool.notion.site/Project-Exercises-6347a371e07241f4a031eedd72866cae)
