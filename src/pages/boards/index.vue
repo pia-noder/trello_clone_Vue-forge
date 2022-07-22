@@ -7,7 +7,7 @@
       <div v-for="(board, index) in boards" :key="index">
         <BoardCard :board-infos="board" />
       </div>
-      <div @click="() => addBoard" :class="$style.addBoard">New Board +</div>
+      <div @click="addBoard" :class="$style.addBoard">New Board +</div>
     </div>
   </div>
 </template>
@@ -17,6 +17,7 @@ import { ref } from "vue";
 import type { Board } from "src/types";
 
 import BoardCard from "../../components/BoardCard.vue";
+import { useAlerts } from "@/stores/alerts";
 
 const boards = ref<Partial<Board>[]>([
   {
@@ -46,8 +47,9 @@ const boards = ref<Partial<Board>[]>([
 ]);
 
 const title = "Boards";
-
+const alerts = useAlerts();
 const addBoard = () => {
+  alerts.success("Board successfully created");
   console.log("add board");
 };
 </script>
