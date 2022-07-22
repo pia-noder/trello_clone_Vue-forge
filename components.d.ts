@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     BoardCard: typeof import('./src/components/BoardCard.vue')['default']
     Drawer: typeof import('./src/components/Drawer.vue')['default']
     DrawerNavigation: typeof import('./src/components/DrawerNavigation.vue')['default']
+    ImageDropZone: typeof import('./src/components/ImageDropZone.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     NavDrawer: typeof import('./src/components/NavDrawer.vue')['default']

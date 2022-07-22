@@ -1,18 +1,13 @@
 <template>
   <div :class="$style.root">
-    <h1>Board Details</h1>
-    {{ id }}
+    <ImageDropZone />
   </div>
 </template>
 
-<script setup lang="ts">
-import { useRoute } from "vue-router";
-const { params } = useRoute();
-const id = params.id;
-</script>
+<script setup lang="ts"></script>
 
 <style module>
 .root {
-  background-color: teal;
+  padding: 24px;
 }
 </style>
